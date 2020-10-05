@@ -69,7 +69,7 @@ TypeError: Error raised
 ```
 
 ## 要求
-请使用 `TypeScript` 完成 [index.ts](./foundations-zh/src/index.ts) 中的函数.
+请使用 `TypeScript` 完成 [index.ts](src/index.ts) 中的函数.
 可以引入部分工具类第三方库，比如 `Lodash`.
 
 ## 评判标准

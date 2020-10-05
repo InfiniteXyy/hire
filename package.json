@@ -1,0 +1,11 @@
+{
+  "name": "hire",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}

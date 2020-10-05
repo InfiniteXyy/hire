@@ -38,10 +38,10 @@ LeetCode 中国的前端团队工作内容:
 
 #### 展现你的能力
 
-- [基础编程能力](./foundations_zh.md)
-- [编写复杂的 TypeScript 类型](./typescript_zh.md)
-- [用 Webpack 实现 predictable long term cache](./webpack_zh.md)
-- [编写工程化的组件](./engineering_zh.md)
-- [用 RxJS 处理复杂的异步业务](./rxjs_zh.md)
+- [基础编程能力](packages/foundations-zh/foundations-zh.md)
+- [编写复杂的 TypeScript 类型](packages/typescript-zh/typescript_zh.md)
+- [用 Webpack 实现 predictable long term cache](packages/webpack-zh/webpack_zh.md)
+- [编写工程化的组件](packages/engineering-zh/engineering_zh.md)
+- [用 RxJS 处理复杂的异步业务](packages/rxjs-zh/rxjs_zh.md)
 
 > 以上几个问题完成一个或多个都有可能获得面试机会，具体情况取决于提交给我们的代码。完成后的代码请发送给 jobs@lingkou.com。
