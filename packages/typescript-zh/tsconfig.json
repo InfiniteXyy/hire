@@ -6,6 +6,7 @@
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
+    "rootDir": "src",
     "jsx": "react",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,

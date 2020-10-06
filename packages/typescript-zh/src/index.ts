@@ -30,32 +30,28 @@ type GetFunctionKeys<T> = {
 
 type OmitPrimitive<T> = Pick<T, GetFunctionKeys<T>>;
 
+type SyncActionCreator<A, R> = (arg: Action<A>) => Action<R>;
+type AsyncActionCreator<A, R> = (arg: Promise<A>) => Promise<Action<R>>;
+
 type Connect<T> = (
   module: T
 ) => {
-  [K in keyof OmitPrimitive<T>]: T[K] extends (arg: Action<infer A>) => Action<infer R>
+  [K in keyof OmitPrimitive<T>]: T[K] extends SyncActionCreator<infer A, infer R>
     ? (arg: A) => Action<R>
-    : T[K] extends (arg: Promise<infer A2>) => Promise<Action<infer R2>>
+    : T[K] extends AsyncActionCreator<infer A2, infer R2>
     ? (arg: A2) => Action<R2>
     : never;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const connect: Connect<EffectModule> = (m) => ({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+const connect: Connect<EffectModule> = () => ({
   delay: (input: number) => ({
     type: 'delay',
-    payload: `hello 2`,
+    payload: `hello ${input}`,
   }),
   setMessage: (input: Date) => ({
     type: 'set-message',
     payload: input.getMilliseconds(),
   }),
 });
-
-// type Connected = {
-//   delay(input: number): Action<string>;
-//   setMessage(action: Date): Action<number>;
-// };
 
 export const connected = connect(new EffectModule());
