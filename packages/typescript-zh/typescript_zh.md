@@ -37,7 +37,7 @@ class EffectModule {
     return input.then(i => ({
       payload: `hello ${i}!`,
       type: 'delay'
-    });
+    }));
   }
 
   setMessage(action: Action<Date>) {
@@ -51,7 +51,7 @@ class EffectModule {
 
 
 
-现在有一个叫 `connect` 的函数，它接受 EffectModule 实例，将它变成另一个一个对象，这个对象上只有**EffectModule 的同名方法**，但是方法的类型签名被改变了:
+现在有一个叫 `connect` 的函数，它接受 EffectModule 实例，将它变成另一个对象，这个对象上只有**EffectModule 的同名方法**，但是方法的类型签名被改变了:
 
 ```ts
 asyncMethod<T, U>(input: Promise<T>): Promise<Action<U>>  变成了
@@ -83,7 +83,7 @@ class EffectModule {
     return input.then(i => ({
       payload: `hello ${i}!`,
       type: 'delay'
-    });
+    }));
   }
 
   setMessage(action: Action<Date>) {
@@ -108,7 +108,7 @@ const connected: Connected = connect(effectModule)
 
 ## 要求
 
-在 [题目链接](https://codesandbox.io/s/o4wwpzyzkq) 里面的 `index.ts` 文件中，有一个 `type Connect = (module: EffectModule) => any`，将 `any` 替换成题目的解答，让编译能够顺利通过，并且 `index.ts` 中 `connected` 的类型与:
+在 [题目链接](https://codesandbox.io/s/4tmtp) 里面的 `index.ts` 文件中，有一个 `type Connect = (module: EffectModule) => any`，将 `any` 替换成题目的解答，让编译能够顺利通过，并且 `index.ts` 中 `connected` 的类型与:
 
 ```typescript
 type Connected = {
