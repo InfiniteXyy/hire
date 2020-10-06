@@ -11,7 +11,7 @@
     "webpack-cli": "^3.3.7"
   },
   "scripts": {
-    "build": "node_modules/.bin/webpack"
+    "build": "webpack"
   },
   "dependencies": {
     "lodash": "^4.17.19"
