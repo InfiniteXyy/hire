@@ -2,17 +2,25 @@
   "name": "xyy-hire",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "eslint": "eslint ."
+  },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@types/jest": "^26.0.14",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-typescript-prettier": "^3.1.0",
     "husky": "^4.3.0",
+    "jest": "^26.5.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
     "typescript": "^3.9.7"
   },
   "husky": {
@@ -22,7 +30,7 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,ts,tsx,md,html,css}": "prettier --write",
-    "packages/**/*.{js,jsx,ts,tsx}": "eslint --fix"
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   }
 }

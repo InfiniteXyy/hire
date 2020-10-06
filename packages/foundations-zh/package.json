@@ -10,10 +10,12 @@
     "build": "node_modules/.bin/shx rm -rf lib && tsc -p tsconfig.json --outDir lib"
   },
   "devDependencies": {
+    "@types/ramda": "^0.27.20",
     "shx": "^0.3.2",
     "typescript": "^3.6.2"
   },
   "dependencies": {
+    "ramda": "^0.27.1",
     "tslib": "^1.10.0"
   }
 }

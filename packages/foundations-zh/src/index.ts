@@ -1,13 +1,13 @@
-export interface ErrorMessage {
-  message: string;
-  stack: Array<{
-    line: number;
-    column: number;
-    filename: string;
-  }>;
+import { ErrorMessage } from './types';
+import getErrorParser from './parser';
+import BaseErrorParser from './parser/base';
+
+export function parseError(err: Error, parser?: BaseErrorParser): ErrorMessage {
+  if (!err.stack) throw new Error('error has no stack tracked');
+  if (!parser) return getErrorParser().parseError(err);
+  return parser.parseError(err);
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function parseError(err: Error): ErrorMessage {
-  // TODO: implement
-}
+export { default as ChromeErrorParser } from './parser/chrome';
+export { default as FirefoxErrorParser } from './parser/firefox';
+export { getErrorParser };

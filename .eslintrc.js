@@ -1,4 +1,3 @@
-/* eslint-disable */
 module.exports = {
   extends: 'airbnb-typescript-prettier',
   settings: {
@@ -6,4 +5,9 @@ module.exports = {
       version: 'latest',
     },
   },
+  rules: {
+    'class-methods-use-this': 'off',
+    'import/prefer-default-export': 'off',
+  },
+  ignorePatterns: ['.eslintrc.js', '**/node_modules/*', '**/lib/*'],
 };

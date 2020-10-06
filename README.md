@@ -18,10 +18,11 @@
 LeetCode 中国的前端团队工作内容:
 
 - [LeetCode | 力扣](https://leetcode-cn.com) 站点的开发与维护
-  
+
   - 开发基于 GraphQL + React + RxJS + TypeScript 的单页应用
 
 - LeetCode 中国企业服务的开发与维护
+
   - 开发基于 GraphQL + React + redux + redux-observable + TypeScript 的单页应用
 
 - 构建 `BDD` 与高度自动化结合的现代化前端工程基础设施
@@ -38,7 +39,7 @@ LeetCode 中国的前端团队工作内容:
 
 #### 展现你的能力
 
-- [基础编程能力](packages/foundations-zh/foundations-zh.md)
+- [基础编程能力](packages/foundations-zh/Question.md)
 - [编写复杂的 TypeScript 类型](packages/typescript-zh/typescript_zh.md)
 - [用 Webpack 实现 predictable long term cache](packages/webpack-zh/webpack_zh.md)
 - [编写工程化的组件](packages/engineering-zh/engineering_zh.md)
