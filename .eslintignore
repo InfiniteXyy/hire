@@ -1,0 +1,6 @@
+.eslintrc.js
+**/node_modules
+**/lib
+**/dist
+**/.cache
+webpack.config.ts

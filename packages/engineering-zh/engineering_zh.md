@@ -10,3 +10,8 @@
 - 你认为过于复杂的细节可以不实现，我们考察的是代码组织能力、抽象能力、代码风格等方面
 - 单元测试的 coverage 越高越好
 - 以 GitHub repo 的形式存放你的代码，`CI/CD` 越自动越好。比如 push 之后的 `lint`，`test`，`codestyle` 检查，`git push tags` 之后的自动发布到 `npm` 等
+
+### TodoList
+
+- [ ] 自动滚动
+- [ ]

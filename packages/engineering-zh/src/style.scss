@@ -1,0 +1,66 @@
+@import 'theme';
+
+* {
+  box-sizing: border-box;
+}
+
+.autocomplete {
+  position: relative;
+  width: 250px;
+  &__input {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid $secondary-dark;
+    border-radius: 0;
+    padding: 0 0.5rem;
+    outline: none;
+    transition: border-color $quick-transition;
+    &:hover,
+    &:focus {
+      border-color: $theme-color;
+    }
+  }
+
+  &__error-msg {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: $theme-color-warning;
+  }
+
+  &__dropdown {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    background-color: $bg-color;
+    border: 1px solid rgba($secondary-dark, 0.5);
+    border-top: none;
+    max-height: 15rem;
+    overflow: auto;
+    min-height: 2.2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-item {
+      padding: 0.5rem;
+      line-height: 1.2rem;
+      font-weight: bold;
+      color: $primary-dark;
+      overflow-wrap: break-word;
+      &--active {
+        background-color: rgba($theme-color-light, 0.5);
+        color: $theme-color;
+      }
+      &--hover {
+        background-color: $theme-color-light;
+        color: $theme-color;
+      }
+    }
+  }
+}

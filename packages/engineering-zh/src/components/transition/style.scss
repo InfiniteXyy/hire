@@ -1,0 +1,41 @@
+@import '../../theme';
+
+.fade-enter {
+  opacity: 0;
+
+  &--active {
+    opacity: 1;
+    transition: opacity $quick-transition;
+  }
+}
+
+.fade-exit {
+  opacity: 1;
+
+  &--active {
+    opacity: 0;
+    transition: opacity $quick-transition;
+  }
+}
+
+.fade-slide-enter {
+  opacity: 0;
+  transform: translateY(0.5rem);
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity $quick-transition, transform $quick-transition;
+  }
+}
+
+.fade-slide-exit {
+  opacity: 1;
+  transform: translateY(0);
+
+  &--active {
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: opacity $quick-transition, transform $quick-transition;
+  }
+}
