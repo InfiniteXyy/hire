@@ -7,11 +7,17 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@types/webpack": "^4.41.22",
+    "cross-env": "^7.0.2",
+    "rimraf": "^3.0.2",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.7",
+    "ts-node": "^9.0.0"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "cross-env TS_NODE_PROJECT=\"tsconfig-webpack.json\" webpack",
+    "prebuild": "rimraf ./dist",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "lodash": "^4.17.19"
