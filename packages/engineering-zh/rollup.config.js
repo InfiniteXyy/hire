@@ -1,3 +1,4 @@
+import { removeDataTestIdTransformer } from 'typescript-transformer-jsx-remove-data-test-id';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
@@ -18,7 +19,11 @@ const options = [
       { file: pkg.module, format: 'es' },
     ],
     plugins: [
-      typescript(),
+      typescript({
+        transformer: () => ({
+          before: [removeDataTestIdTransformer()],
+        }),
+      }),
       resolve({ resolveOnly: ['classnames'] }),
       commonjs(),
       postcss({

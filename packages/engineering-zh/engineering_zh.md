@@ -13,5 +13,11 @@
 
 ### TodoList
 
-- [ ] 自动滚动
-- [ ]
+由于时间颇为仓促，有些地方还是没有细细打磨
+
+- [ ] dropdown 下拉菜单可以自定义大小
+- [ ] dropdown 的显示和关闭有更好的交互策略
+- [ ] 在使用 useKeyPress 时可以做一些性能优化，例如避免重复创建 map
+- [ ] Loading 效果和空列表效果可以自定义
+- [x] 移除生产环境下的 data-testid
+- [ ] 使用组件时可以传入 React 原生 props，例如键入 Enter 后，根据传入参数的返回值决定是否要打开 dropdown

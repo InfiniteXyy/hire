@@ -16,6 +16,10 @@ interface AutoCompleteProps {
   optionRenderer?(option: string, active: boolean): JSX.Element;
   // map option content to key/id, AutoComplete will use it to determine active status
   optionKeyExtractor?(option: string): string;
+  styles?: {
+    inputStyle: React.CSSProperties;
+    dropdownStyle: React.CSSProperties;
+  };
   error?: string;
   isLoading?: boolean;
   placeholder?: string;
@@ -32,6 +36,7 @@ export default function AutoComplete(props: AutoCompleteProps): JSX.Element {
     optionRenderer,
     optionKeyExtractor,
     placeholder,
+    styles = { dropdownStyle: {}, inputStyle: {} },
   } = props;
 
   const [isShowDropdown, setShowDropdown] = useState(false);
@@ -56,11 +61,12 @@ export default function AutoComplete(props: AutoCompleteProps): JSX.Element {
   const renderDropdown = (): JSX.Element => {
     return (
       <FadeSlide visible={isShowDropdown}>
-        <ul className="autocomplete__dropdown">
+        <ul data-testid="dropdown" className="autocomplete__dropdown" style={styles.dropdownStyle}>
           {options.map((option, index) => {
             const isActive = (optionKeyExtractor ? optionKeyExtractor(option) : option) === value;
             return (
               <li
+                data-testid={`option_item${index === currentHoverIndex ? '_hovered' : ''}`}
                 className={cls('autocomplete__dropdown-item', {
                   'autocomplete__dropdown-item--active': isActive,
                   'autocomplete__dropdown-item--hover': index === currentHoverIndex,
@@ -87,6 +93,7 @@ export default function AutoComplete(props: AutoCompleteProps): JSX.Element {
     <div className="autocomplete">
       {error && <div className="autocomplete__error-msg">{error}</div>}
       <input
+        data-testid="input"
         ref={keypressRef}
         className="autocomplete__input"
         value={value}
@@ -94,6 +101,7 @@ export default function AutoComplete(props: AutoCompleteProps): JSX.Element {
         onClick={() => setShowDropdown((cur) => !cur)}
         onBlur={() => setShowDropdown(false)}
         placeholder={placeholder}
+        style={styles.inputStyle}
       />
       {renderDropdown()}
     </div>

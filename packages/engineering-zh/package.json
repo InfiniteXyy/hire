@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A Simple React Autocomplete Component",
   "author": "Yiyang Xu",
+  "homepage": "https://github.com/InfiniteXyy/hire/tree/master/packages/engineering-zh",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
@@ -28,6 +29,9 @@
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/react-hooks": "^3.4.2",
     "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8",
@@ -42,6 +46,7 @@
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
-    "taze": "^0.3.1"
+    "taze": "^0.3.1",
+    "typescript-transformer-jsx-remove-data-test-id": "^1.1.0"
   }
 }

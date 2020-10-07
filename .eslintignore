@@ -3,4 +3,6 @@
 **/lib
 **/dist
 **/.cache
+*.spec.tsx
+*.spec.ts
 webpack.config.ts

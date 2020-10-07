@@ -33,6 +33,10 @@ type Props = {
   isLoading?: boolean;
   // input placeholder
   placeholder?: string;
+  styles?: {
+    input: CSSProperties;
+    dropdown: CSSProperties;
+  };
 };
 ```
 
