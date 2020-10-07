@@ -16,7 +16,7 @@
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
     "update:dependency": "taze -w",
-    "publish": "npm npm publish",
+    "publish": "yarn npm publish",
     "prepublish": "yarn build"
   },
   "dependencies": {
