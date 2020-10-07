@@ -6,7 +6,7 @@
     "dev": "parcel ./index.html"
   },
   "dependencies": {
-    "@infinitex/autocomplete": "0.0.1",
+    "@infinitex/autocomplete": "0.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rxjs": "^6.6.3"
