@@ -27,19 +27,3 @@ jobs:
         run: yarn
       - name: Unit Test
         run: yarn test
-  npm-publish:
-    if: ${{ github.ref == 'release' }}
-    name: npm-publish
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - name: Install dependencies
-        run: yarn
-      - name: Publish
-        run: yarn workspace @infinitex/autocomplete run publish
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
