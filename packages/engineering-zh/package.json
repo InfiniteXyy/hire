@@ -1,6 +1,6 @@
 {
   "name": "@infinitex/autocomplete",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Simple React Autocomplete Component",
   "author": "Yiyang Xu",
   "homepage": "https://github.com/InfiniteXyy/hire/tree/master/packages/engineering-zh",
@@ -15,7 +15,9 @@
   "scripts": {
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
-    "update:dependency": "taze -w"
+    "update:dependency": "taze -w",
+    "publish": "npm publish",
+    "prepublish": "yarn build"
   },
   "dependencies": {
     "classnames": "^2.2.6"
